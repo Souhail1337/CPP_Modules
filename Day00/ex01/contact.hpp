@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:19:29 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/04 19:37:41 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/12/05 04:09:59 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class Contact
         void print_contac(void);
         std::string test1(void);
         void search_contact(void);
+        int count;
         std::string input;
 };
 
