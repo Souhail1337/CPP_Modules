@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 04:09:23 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/11 11:06:39 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/12/14 12:02:19 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ class Phone{
         int counter;
     public:
         Phone(void);
-        
+        Contact get_info();
         void add_contact(Contact contact);
         void search_contact(int ind);
         void show_contact(int id);
-        char *get_prompt();
+        
+        void get_cont();
         ~Phone(void);
 };
 

@@ -6,21 +6,19 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 03:35:38 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/11 11:17:12 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/12/14 10:59:34 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "contact.hpp"
-
-Contact::Contact(std::string first_name, std::string last_name, std::string nickname
-                    std::string Phone_number, std::string dark_sercret)
+Contact::Contact()
 {
-    this->first_name = first_name;
-    this->last_name = last_name;
-    this->nickname = nickname;
-    this->Phone_number = Phone_number;
-    this->dark_sercret = dark_sercret;
+    //std::cout << "const called";
+    return;
 }
+
+
+ 
 
 std::string Contact::get_first()
 {
@@ -30,18 +28,22 @@ std::string Contact::get_last()
 {
     return this->last_name;
 }
-std::string Contact::get_phone()
-{
-    return this->Phone_number;
-}
+
 std::string Contact::get_nick()
 {
     return this->Nickname;
 }
-std::string Contact::get_dark()
+
+Contact::~Contact()
 {
-    return this->dark_sercret;
+    //std::cout << "dest called";
+    return ;
 }
+// void set_contact(std::string first_name,
+//         std::string last_name, std::string Nickname,
+//         std::string Phone_number, std::string dark_secret )
+// 
+/*
 std::string get_input()
 {
     std::string in;
@@ -56,7 +58,7 @@ void Contact::search_contact()
 }
 
 int Contact::get_info()
-{
+{ 
     std::cout << "Enter First Name :";
     std::getline(std::cin, first_name);
     std::cout << "Enter last Name :";
@@ -103,3 +105,4 @@ int main(void)
     }
     return (0);
 }
+*/
