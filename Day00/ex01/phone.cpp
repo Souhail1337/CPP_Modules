@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 04:10:44 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/15 10:15:17 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/12/15 10:57:19 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,9 @@ Contact Contact::get_cont()
 
 Phone::~Phone(void)
 {
-    //std::cout << "dest called" <<std::endl;
-    return ;
 }
-void Contact::print_contac(Contact contact)
+
+void Contact::print_contac()
 {
     std::cout << "name : " << first_name << std::endl;
     std::cout << "last name " << last_name << std::endl;
@@ -64,7 +63,6 @@ void Contact::print_contac(Contact contact)
 }
 std::string trimi(std::string str)
 {
-    int i;
     if (str.length() > 9)
     {
         str = str.substr(0, 10);
@@ -74,7 +72,6 @@ std::string trimi(std::string str)
 }
 bool isNum(const std::string& str)
 {
-    int i = 0;
     for (unsigned long i = 0; i < str.size();i++)
     {
         if(std::isdigit(str[i]) == 0)
@@ -96,7 +93,6 @@ void Contact::print_fln(int i)
 }
 void search_contac(Contact *contact, int i)
 {
-    int index;
     unsigned long j = 0;
     std::string str;
      std::cout << std::setfill(' ') << std::setw(10) << "id";
@@ -107,7 +103,7 @@ void search_contac(Contact *contact, int i)
      std::cout << "|";
     std::cout << std::setfill(' ') << std::setw(10) << "Nickname"; 
     std::cout << "|" << std::endl;
-    while(j < i)
+    while((int)j < i)
     {
         contact[j].print_fln(j + 1);
         j++;
@@ -120,19 +116,18 @@ void search_contac(Contact *contact, int i)
     {
     j = std::stoul(str);
     
-    if (j > i)
+    if ((int)j > i)
         std::cout << "Had lindex akhay rah makaynsh wllh" << std::endl;
     else if (j == 0)
         std::cout << "kanbdaw l7ssab mn 1 ;) malk 3la had l9walb " << std::endl;
     else
-        contact[j - 1].print_contac(contact[j - 1]);
+        contact[j - 1].print_contac();
     }
     return;
 }
 int main(void)
 {
     int count = 0;
-    int i = 0;
     Contact contact[8];
     std::string input ;
     input = get_input();
@@ -160,7 +155,11 @@ int main(void)
             std::cout << "glna lik dekhel ya ADD, SEARCH wla EXIT" << std::endl;
         
         std::cout << "Ahah w db : ";
-        //std::cout << " HA SHNO DKHLTI " << input << std::endl;
         std::getline(std::cin, input);
+        if (std::cin.eof())
+        {
+            std::cout << std::endl << "Couldn't read input" << std::endl;
+            exit(1);
+        }
     }   
 }

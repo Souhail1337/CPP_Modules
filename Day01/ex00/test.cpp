@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/04 03:35:38 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/15 10:36:13 by sel-fcht         ###   ########.fr       */
+/*   Created: 2021/12/15 12:53:54 by sel-fcht          #+#    #+#             */
+/*   Updated: 2021/12/15 12:57:03 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
-Contact::Contact()
+#include <iostream>
+
+using namespace std;
+
+int main()
 {
-    //std::cout << "const called";
-    return;
-}
+    int *test = NULL;
+    test = new int;
+    *test = 21111;
 
-
- 
-
-std::string Contact::get_first()
-{
-    return this->first_name;
-}
-std::string Contact::get_last()
-{
-    return this->last_name;
-}
-
-std::string Contact::get_nick()
-{
-    return this->Nickname;
-}
-
-Contact::~Contact()
-{
-
+    std::cout << "" << *test << std::endl;
+    delete test;
+    while(1);
+    
 }

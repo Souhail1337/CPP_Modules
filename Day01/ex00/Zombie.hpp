@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/04 03:35:38 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/15 10:36:13 by sel-fcht         ###   ########.fr       */
+/*   Created: 2021/12/15 11:10:05 by sel-fcht          #+#    #+#             */
+/*   Updated: 2021/12/15 13:46:21 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
-Contact::Contact()
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
+
+class Zombie
 {
-    //std::cout << "const called";
-    return;
-}
+    private:
+        std::string name;
+        Zombie();
+    public:
+        Zombie(std::string _name);
+    
+        ~Zombie(void);
+        void annonce();
+};
 
 
- 
 
-std::string Contact::get_first()
-{
-    return this->first_name;
-}
-std::string Contact::get_last()
-{
-    return this->last_name;
-}
-
-std::string Contact::get_nick()
-{
-    return this->Nickname;
-}
-
-Contact::~Contact()
-{
-
-}
+#endif
