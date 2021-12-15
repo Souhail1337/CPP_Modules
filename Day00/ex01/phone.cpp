@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 04:10:44 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/15 10:57:19 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/12/15 16:37:47 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 std::string get_input()
 {
     std::string in;
-    std::cout << "enter your command between ADD, EXIT , and SEARCH" <<std::endl;
+    std::cout << "enter your command between ADD, EXIT , and SEARCH :" ;
     std::getline(std::cin, in);
     return(in);
 }
