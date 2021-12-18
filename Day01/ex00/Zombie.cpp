@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 14:34:53 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/15 14:42:01 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/12/18 15:36:38 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 Zombie::Zombie()
 {
+    std::cout << "Const Called"<< std::endl;
+    return ;
 }
 
 Zombie::Zombie(std::string name)
@@ -23,10 +25,12 @@ Zombie::Zombie(std::string name)
 
 void Zombie::annonce(void)
 { 
-    std::cout << "" << this->name << "BraiiiiiiiiinnnnnZZZ" << std::endl;
+    std::cout << "" << this->name << " BraiiiiiiiiinnnnnZZZ..." << std::endl;
 }
 
 Zombie::~Zombie()
 {
-    std::cout << this->name << "Is Dead" << std::endl;
+    std::cout << "dest called" << std::endl;
+    std::cout << "" << this->name << " Is Dead" << std::endl;
+    return;
 }
