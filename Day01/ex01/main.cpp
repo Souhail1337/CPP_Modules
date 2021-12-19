@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/15 14:34:53 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/19 17:01:30 by sel-fcht         ###   ########.fr       */
+/*   Created: 2021/12/20 00:20:50 by sel-fcht          #+#    #+#             */
+/*   Updated: 2021/12/20 00:29:48 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie()
+int main()
 {
-}
-
-Zombie::Zombie(std::string name) : name(name)
-{
-}
-
-void Zombie::annonce(void)
-{ 
-    std::cout << "<" << this->name << "> " <<  "BraiiiiiiinnnzzzZ..." << std::endl;
-    return;
-}
-
-Zombie::~Zombie()
-{
-    std::cout << "<" << this->name << "> " << " Is Dead" << std::endl;
-    return;
+    Zombie *test = ZombieHorde(2, "Aya");
+    delete[] test;
+    return(0);
 }

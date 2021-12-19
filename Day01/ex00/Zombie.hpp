@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 11:10:05 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/17 15:25:55 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/12/19 17:10:37 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@ class Zombie
 {
     private:
         std::string name;
-        Zombie();
+    
     public:
-        Zombie(std::string _name);
+        Zombie();
+        Zombie(std::string name);
         void annonce();
-        ~Zombie(void);
+        ~Zombie();
 };
-
 Zombie *newZombie(std::string name);
-void random(std::string name)
+void randomChump(std::string name);
 
 
 #endif

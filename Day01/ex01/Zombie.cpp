@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/15 14:34:53 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/19 17:01:30 by sel-fcht         ###   ########.fr       */
+/*   Created: 2021/12/19 20:11:27 by sel-fcht          #+#    #+#             */
+/*   Updated: 2021/12/20 00:26:28 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,16 @@ Zombie::Zombie()
 {
 }
 
-Zombie::Zombie(std::string name) : name(name)
+Zombie::Zombie(std::string name)
 {
+    this->name = name;
 }
-
-void Zombie::annonce(void)
-{ 
-    std::cout << "<" << this->name << "> " <<  "BraiiiiiiinnnzzzZ..." << std::endl;
-    return;
+void Zombie::annonce()
+{
+    std::cout << "<" << this->name << "> " << "Braàaaainzzz...." << std::endl;   
 }
-
 Zombie::~Zombie()
 {
-    std::cout << "<" << this->name << "> " << " Is Dead" << std::endl;
+    std::cout <<  "<" << this->name << "> " <<  "is dead" << std::endl;
     return;
 }
