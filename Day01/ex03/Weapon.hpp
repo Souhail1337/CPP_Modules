@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 01:20:43 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/20 01:29:48 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/12/20 03:13:24 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ class Weapon
     private:
         std::string type;
     public:
-        Weapon(std::string type)
-        std::string get_type();
+        Weapon();
+        Weapon(std::string type);
+        std::string& get_type();
         void set_type(std::string type);
         ~Weapon();
 };
