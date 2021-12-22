@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 15:33:07 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/22 16:01:58 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/12/22 17:02:34 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int main()
 {
     Karen ka;
-    ka.complain("debug");
+    ka.complain("WARNING");
     return (0);
 }

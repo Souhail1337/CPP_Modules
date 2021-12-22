@@ -6,7 +6,7 @@
 /*   By: sel-fcht <sel-fcht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 07:21:06 by sel-fcht          #+#    #+#             */
-/*   Updated: 2021/12/22 16:01:52 by sel-fcht         ###   ########.fr       */
+/*   Updated: 2021/12/22 17:01:29 by sel-fcht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,25 @@ void Karen::error()
 
 void Karen::complain(std::string level)
 {
-   // Karen::level[4] = {"debug", "info", "warning", "error"};
-   std::cout << "complain " << level << std::endl;
+    int i = 0;
+    void (Karen::*test[4]) (void);
+    std::string str[4] = {"DEBUG","INFO", "WARNING", "ERROR",};
+    test[0] = &Karen::debug;
+    test[1] = &Karen::info;
+    test[2] = &Karen::warning;
+    test[3] = &Karen::error;   
+    while(i < 4)
+    {
+        if (str[i] == level)
+        {
+            (this->*test[i])();
+            return;
+        }
+        i++;
+    }
+        std::cout << "Please Enter : " << std::endl;
+        std::cout << "DEBUG || WARNING || ERROR || INFO " << std::endl;
+        return;
 }
 Karen::~Karen()
 {
